@@ -261,7 +261,7 @@
     }
     
     BOOL registered = NO;
-    NSBundle *bundle = [NSBundle bundleForClass:NSClassFromString(cellIdentifier)];
+    NSBundle *bundle = [NSBundle mainBundle];
     if ([bundle pathForResource:cellIdentifier ofType:@"nib"]) {
         UINib *nib = [UINib nibWithNibName:cellIdentifier bundle:nil];
         if(nib) {
